@@ -26,6 +26,6 @@ def count_requests(method: Callable) -> Callable:
 
 @count_requests
 def get_page(url: str) -> str:
-    """ Fetch HTML content from an endpoint"""
+    """ Makes a http request to a given endpoint"""
     req = requests.get(url)
     return req.text
